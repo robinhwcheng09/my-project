@@ -1,4 +1,7 @@
-.container {
-   margin:auto;
-   width: 300px;
+nav {
+  display: block;
+}
+
+body {
+  margin:auto;
 }
