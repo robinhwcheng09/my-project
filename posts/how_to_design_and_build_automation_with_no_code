@@ -12,39 +12,51 @@
         <body>
             <nav>
                 <a href="/">Home</a>
-                <a href="blog.html">Blog</a>
+                <a href="/blog.html">Blog</a>
             </nav> 
-            <h1>How to automate your work with no-code tools?</h1>
-            <p> You’ve probably heard the term “automate your process” before. Maybe you’re curious about the benefits of automating repetitive tasks or the scaling processes, but don’t know where to start. </p>
-            <h3>What is automation and how does it work?</h3>
-            <p>In simple words, automation is an autonomous system. That’s it, this could include ordering food on apps, generating reports, determining the best route to a destination, washing machines, and navigating airplanes.</p>
-            <p>You may wonder what a system is, it’s a process with input(s), a procedure, and output(s). Different kinds of systems can have various amounts of inputs and outputs, but always one procedure. The input is the data required and the procedure changes it to generate the desired output. Below are some examples of systems.</p>
-            <img src="/images/system_examples.jpg" alt="Example of a system">
-            <figcaption>Example of systems</figcaption>
-            <p>A system could also be made out of multiple smaller systems. This usually happens when you’re building larger and complex systems. Below is an example of a complex system and it’s essentially a collection of smaller systems: system 1, system 2, system 3, …, and system x. Note that a system’s output could also be the input of the following systems.</p>
-            <img src="/images/multi_system_example.jpg" alt="Example of multi-system">
-            <figcaption>Example of multi-system</figcaption>
-            <p>Hopefully, this provides a basic understanding of systems. In the next article, let’s see how to start design one.</p>
-            <p>The first step is to determine the output and the input required for that to happen. Using the food delivery example, your output is the actual food and the input is the food order. The last step is determining the procedure,  this is definitely more complicated but your familiarity with the entire process will make it easier.</p>
-            <p>Using the complex system concept, we break down the procedure into smaller systems. A good practice is to keep each step simple. The simpler it is the easier for you to design around it. For example, after ordering the food, it has to be delivered to the restaurant so they know what to prepare. The action or the procedure here is simply sending the restaurant the food order.</p>
-            <p>This would be the first system towards receiving food at your doorstep. The food then has to be prepared, the food delivery driver collects the food, and delivers it to your doorstep. By determining each step or system, we slowly build up the process to change the food order into actual food that’s delivered to our doorstep.</p>
-            <p>An overview of the process would look something like this:</p>
-            <img src="/images/food_delivery_system_example.jpg" alt="Food delivery system">
-            <figcaption>Example of a food delievery system</figcaption>
-            <p>From the example above, we can see what each smaller system’s action is. This is important because only when we understand what the system does then can we find the proper tool to implement. </p>
-            <h3>How to actually implement automation?</h3>
-            <p>But how do we actually do this? How do we connect the smaller systems? This is where tools such as Zapier, n8n, and Integromat come in, they help you connect the multiple systems into an ultimate system.</p>
-            <p>For other systems, this will depend on your familiarity with different tools. Let’s take notifying the food delivery driver as an example, there’re many ways to deliver a message and it can be done through messaging apps or email. The tools you use may depend on the everyday tools you use and what the following system is best receptive to.</p>
-            <p>This will require some experience and familiarity with tools on your end to see what’s best for each step. However, there’s always Google or Product Hunt to find tools to automate the smaller systems and build the ultimate system that works for you.</p>
-            <h3>Final thoughts</h3>
-            <p>To sum up, follow these steps if you would like to automate your workflows:</p>
-            <ol>
-                <li>Iron out all the details of your process</li>
-                <li>Design the systems with clear procedures</li>
-                <li>Finding the right tools to perform the procedures</li>
-                <li>Connecting the systems using integration tools</li>
-            </ol>
-            <p>Hope this helps. If you have any questions, feel free to find me on Twitter , LinkedIn, or email.</p>
         </body>
     </section>
+    <article class="post">
+        <section class = "longform container container--narrow">
+            <body>
+                <h1>How to automate your work with no-code tools?</h1>
+                <p> You’ve probably heard the term “automate your process” before. Maybe you’re curious about the benefits of automating repetitive tasks or the scaling processes, but don’t know where to start. </p>
+                <h3>What is automation and how does it work?</h3>
+                <p>In simple words, automation is an autonomous system. That’s it, this could include ordering food on apps, generating reports, determining the best route to a destination, washing machines, and navigating airplanes.</p>
+                <p>You may wonder what a system is, it’s a process with input(s), a procedure, and output(s). Different kinds of systems can have various amounts of inputs and outputs, but always one procedure. The input is the data required and the procedure changes it to generate the desired output. Below are some examples of systems.</p>
+                <figure>
+                    <img src="/images/system_examples.jpg" alt="Example of a system">
+                </figure>
+                <figcaption>Example of systems</figcaption>
+                <p>A system could also be made out of multiple smaller systems. This usually happens when you’re building larger and complex systems. Below is an example of a complex system and it’s essentially a collection of smaller systems: system 1, system 2, system 3, …, and system x. Note that a system’s output could also be the input of the following systems.</p>
+                <figure>
+                    <img src="/images/multi_system_example.jpg" alt="Example of multi-system">
+                </figure>
+                <figcaption>Example of multi-system</figcaption>
+                <p>Hopefully, this provides a basic understanding of systems. In the next article, let’s see how to start design one.</p>
+                <p>The first step is to determine the output and the input required for that to happen. Using the food delivery example, your output is the actual food and the input is the food order. The last step is determining the procedure,  this is definitely more complicated but your familiarity with the entire process will make it easier.</p>
+                <p>Using the complex system concept, we break down the procedure into smaller systems. A good practice is to keep each step simple. The simpler it is the easier for you to design around it. For example, after ordering the food, it has to be delivered to the restaurant so they know what to prepare. The action or the procedure here is simply sending the restaurant the food order.</p>
+                <p>This would be the first system towards receiving food at your doorstep. The food then has to be prepared, the food delivery driver collects the food, and delivers it to your doorstep. By determining each step or system, we slowly build up the process to change the food order into actual food that’s delivered to our doorstep.</p>
+                <p>An overview of the process would look something like this:</p>
+                <figure>
+                    <img src="/images/food_delivery_system_example.jpg" alt="Food delivery system">
+                </figure>
+                <figcaption>Example of a food delievery system</figcaption>
+                <p>From the example above, we can see what each smaller system’s action is. This is important because only when we understand what the system does then can we find the proper tool to implement. </p>
+                <h3>How to actually implement automation?</h3>
+                <p>But how do we actually do this? How do we connect the smaller systems? This is where tools such as Zapier, n8n, and Integromat come in, they help you connect the multiple systems into an ultimate system.</p>
+                <p>For other systems, this will depend on your familiarity with different tools. Let’s take notifying the food delivery driver as an example, there’re many ways to deliver a message and it can be done through messaging apps or email. The tools you use may depend on the everyday tools you use and what the following system is best receptive to.</p>
+                <p>This will require some experience and familiarity with tools on your end to see what’s best for each step. However, there’s always Google or Product Hunt to find tools to automate the smaller systems and build the ultimate system that works for you.</p>
+                <h3>Final thoughts</h3>
+                <p>To sum up, follow these steps if you would like to automate your workflows:</p>
+                <ol>
+                    <li>Iron out all the details of your process</li>
+                    <li>Design the systems with clear procedures</li>
+                    <li>Finding the right tools to perform the procedures</li>
+                    <li>Connecting the systems using integration tools</li>
+                </ol>
+                <p>Hope this helps. If you have any questions, feel free to find me on Twitter , LinkedIn, or email.</p>
+            </body>
+        </section>
+    </article>
 </html>
