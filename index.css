@@ -1,9 +1,21 @@
+html {
+  font-family: adelle-sans, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
 nav {
-  display: block;
+  font-size: 21px;
+}
+
+ul {
+  list-style: none;
 }
 
 body {
-  text-align: center;
+  /* text-align: center; */
+  font-style: normal;
+  font-size: 20px;
 }
 
 .container {
@@ -16,4 +28,28 @@ body {
 
 .container--narrow {
   max-width: 30rem;
+}
+
+a {
+  text-decoration: none;
+  color:inherit;
+}
+
+.header__item {
+  display: inline-block;
+  /* text-align:; */
+  padding: 0.8em 0.2em;
+}
+
+article {
+  margin:auto;
+}
+
+.longform {
+  font-family: georgia, serif;
+  color:rgba(22,22,22,0.9)
+}
+
+.home_heading {
+
 }
