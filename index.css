@@ -4,12 +4,14 @@ html {
   font-weight: 400;
 }
 
-nav {
-  font-size: 21px;
+ul {
+  text-align:center;
 }
 
-ul {
-  list-style: none;
+
+.container__nav {
+  /* color: aqua; */
+  max-width: 39rem;
 }
 
 body {
@@ -37,8 +39,8 @@ a {
 
 .header__item {
   display: inline-block;
-  /* text-align:; */
   padding: 0.8em 0.2em;
+  font-size: 21px;
 }
 
 article {
