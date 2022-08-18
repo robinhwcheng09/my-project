@@ -12,6 +12,7 @@ ul {
 .container__nav {
   /* color: aqua; */
   max-width: 30rem;
+  /* text-align: left; */
 }
 
 body {
