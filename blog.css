@@ -4,31 +4,46 @@ html {
   font-weight: 400;
 }
 
-nav {
-    display: block;
-  }
-  
-body {
-    text-align: center;
-  }
-
-section {
-    text-align: center;
-  }
-
 ul {
-        text-align: center;
-        list-style-position: inside;
-    }
+  text-align:left;
+  padding:0%
+}
 
-li {
-    text-align: center;
-  }
+
+body {
+  /* text-align: center; */
+  font-style: normal;
+  font-size: 20px;
+}
 
 .container {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.container--narrow {
+  max-width: 30rem;
+}
+
+a {
+  text-decoration: none;
+  color:inherit;
+}
+
+.header__item {
+  display: inline-block;
+  padding: 0.8em 0.2em;
+  font-size: 21px;
+}
+
+article {
+  margin:auto;
+}
+
+.longform {
+  font-family: georgia, serif;
+  color:rgba(22,22,22,0.9)
 }
