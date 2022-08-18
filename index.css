@@ -5,15 +5,10 @@ html {
 }
 
 ul {
-  text-align:center;
+  text-align:left;
+  padding:0%
 }
 
-
-.container__nav {
-  /* color: aqua; */
-  max-width: 30rem;
-  /* text-align: left; */
-}
 
 body {
   /* text-align: center; */
@@ -51,8 +46,4 @@ article {
 .longform {
   font-family: georgia, serif;
   color:rgba(22,22,22,0.9)
-}
-
-.home_heading {
-
 }
