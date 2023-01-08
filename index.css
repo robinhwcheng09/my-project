@@ -5,13 +5,12 @@ html {
 }
 
 ul {
-  text-align:left;
-  padding:0px;
+  text-align: left;
+  padding: 0;
+  margin: 0;
 }
 
-
 body {
-  /* text-align: center; */
   font-style: normal;
   font-size: 20px;
 }
@@ -30,7 +29,7 @@ body {
 
 a {
   text-decoration: none;
-  color:inherit;
+  color: inherit;
 }
 
 .header__item {
@@ -39,11 +38,12 @@ a {
   font-size: 21px;
 }
 
-article {
-  margin:auto;
+.home.heading {
+  margin: 0;
+  font-size: 2em;
 }
 
 .longform {
   font-family: georgia, serif;
-  color:rgba(22,22,22,0.9)
+  color: rgba(22, 22, 22, 0.9);
 }
