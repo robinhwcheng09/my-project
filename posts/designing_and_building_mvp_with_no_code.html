@@ -25,48 +25,63 @@
             </nav>
         </body>
     </header>
-    <article>
-        <section class = "longform container container--narrow">
+    <section class = "longform container container--narrow">
+        <article>
             <body>
-                <h1>How to automate your work with no-code tools?</h1>
-                <p> You’ve probably heard the term “automate your process” before or just curious about the benefits of automating repetitive tasks or the scaling processes, but don’t know where to start. I wrote this to help other, or things I wish I had known, while learning no-code automations. </p>
-                <h3>What is automation and how does it work?</h3>
-                <p>In simple words, automation is a system. That’s it, this includes ordering food on apps, generating reports, determining the best route to a destination, washing machines, and navigating airplanes.</p>
-                <p>You may ask what is a system? Think of it as a process with input(s), a procedure, and output(s). Different kinds of systems can have various amounts of inputs and outputs, but always one procedure. The input is the data required and the procedure changes it to generate the desired output. Below are some examples of systems.</p>
-                <figure>
-                    <img src="/images/system_examples.jpg" alt="Example of a system">
-                </figure>
-                <figcaption>Example of systems</figcaption>
-                <p>A system could also be made out of multiple smaller systems. This usually happens when you’re building larger and complex systems. Below is an example of a complex system and it’s essentially a collection of smaller systems: system 1, system 2, system 3, …, and system x. Note that a system’s output could also be the input of the following systems.</p>
-                <figure>
-                    <img src="/images/multi_system_example.jpg" alt="Example of multi-system">
-                </figure>
-                <figcaption>Example of multi-system</figcaption>
-                <p>Hopefully, this provides a basic understanding of systems. In the following, let’s see how to start design one.</p>
-                <h3>How to design a system?</h3>
-                <p>The first step is to determine the output and the input required for that to happen. Using the food delivery example, your output is the actual food and the input is the food order. The last step is determining the procedure,  this is definitely more complicated but your familiarity with the entire process will make it easier.</p>
-                <p>Using the complex system concept, we break down the procedure into smaller systems. A good practice is to keep each step simple. The simpler it is the easier for you to design around it. For example, after making the order, the info has to be shared with the restaurant to be prepared. The action or the procedure here is simply sending the restaurant the food order.</p>
-                <p>This would be the first system towards receiving food at your doorstep. The food then has to be prepared, the food delivery driver collects the food, and delivers it to your doorstep. By determining each step or system, we slowly build up the process to change the food order into actual food that’s delivered to our doorstep.</p>
-                <p>An overview of the process would look something like this:</p>
-                <figure>
-                    <img src="/images/food_delivery_system_example.jpg" alt="Food delivery system">
-                </figure>
-                <figcaption>Example of a food delievery system</figcaption>
-                <p>From the example above, we can see what each smaller system’s action is. This is important because only when we understand what the system does then can we find the proper tool to implement. </p>
-                <h3>How to actually implement automation?</h3>
-                <p>But how do we actually do this? How do we connect the smaller systems? This is where tools such as Zapier, n8n, and Make come in, they help you connect the multiple systems into an ultimate system.</p>
-                <p>For other systems, this will depend on your familiarity with different tools. Let’s take notifying the food delivery driver as an example, there’re many ways to deliver a message and it can be done through messaging apps or email. The tools you use may depend on the everyday tools you use and what the following system is best receptive to.</p>
-                <p>This will require some experience and familiarity with tools on your end to see what’s best for each step. There’s always Google or Product Hunt to find tools to automate the smaller systems and build the ultimate system that works for you.</p>
-                <h3>Final thoughts</h3>
-                <p>To sum up, follow these steps if you would like to automate your workflows:</p>
+                <h1>Designing and building MVP with no-code tools</h1>
+                <p> Back in November 2021, we wanted to launch an MVP for Arc, where remote companies meet great developers. The idea was to allow companies to browse through developers and invite them to interview right away.</p>
+                <p>The first step is to plan out the process and decide on the tools for implementation.</p>
+
                 <ol>
-                    <li>Iron out the details of your process</li>
-                    <li>Design the systems with clear procedures, inputs, and outputs</li>
-                    <li>Finding the right tools to perform the procedures</li>
-                    <li>Connecting the systems using integration tools</li>
+                    <li>Client views list of developer</li>
+                    <li>Client invites the developer to interview</li>
+                    <li>Developer sees the interview request</li>
+                    <li>Developer responds to the interview request</li>
+                    <ol type = "A">
+                        <li>If accepted, introduce and prep both parties for next step</li>
+                        <li>If rejected, share update with client</li>
+                    </ol>
                 </ol>
-                <p>Hope this helps and enjoy building your first system!</p>
+
+                <p>With the process listed out, we can think about the implementation. What we found helpful is to break the process into smaller steps and list the important features of each step. This is great for project management and lets us focus on the problem we’re solving for each step.</p>
+
+                <ol>
+                    <li>A list for client to browse</li>
+                    <li>Inviting developer to interview</li>
+                    <li>Updating developer about the interview request</li>
+                    <li>Managing Interview Requests: Developer Responses and Results</li>
+                    <li>Recording and sharing the result</li>
+                </ol>
+
+                <h3>A list for client to browse</h3>
+                <p>To begin, the client will see a list of available developers and have the ability to invite them to an interview. In our first iteration, we used Notion, but found it difficult to maintain and automate.</p>
+                <p>For our final version, we utilized Spreadsimple, a tool that allows you to build websites using Google Sheets. By populating the Google Sheet with developer information, Spreadsimple generates a user-friendly UI with each developer having their own card and information. This method was perfect for our use case because it allowed us to easily populate the Google Sheet with developer information.</p>
+                <figure>
+                    <img src="/images/arc_featured_developer_list_example.jpg" alt = "Example of featured developer list">
+                </figure>
+                <figcaption>Example of featured developer list</figcaption>
+                <p>Using Zapier, we collected important information such as the developer's Arc profile URL, short summary, location, and tech stacks, which were then inserted into the Google Sheet. From there, Spreadsimple generated a UI for each developer with their own individual card and information</p>
+
+
+                <h3>Inviting developer to interview</h3>
+                <p>On the developer list, each candidate has a brief introduction, their key skills, and a link to their Arc profile, which provides a more detailed overview of their experience. To streamline the interview process, we added an "Invite to Interview" button on each Arc profile page. Clicking this button opens a Typeform that prompts the client to provide their company and role information, which is shared with the developer via Slack. We use Zapier to record and organize these interests on a separate Google Sheet, enabling us to track developer responses and conduct analysis.</p>
+                <p>The final result is a streamlined process that allows clients to easily invite developers for interviews and provides developers with clear information about the role and company. The use of Typeform and Slack integration enables the process to be automated and track responses efficiently.</p>
+
+
+                <h3>Updating developer about the interview request</h3>
+                <p>On the developer end, we use our developer community on Slack. At the beginning of each batch, we create private channels for each developer, which only they have access to. Whenever a client submits an interview request, a Slack message is sent to the developer's private channel with the client’s company and role info. This allows the developer to review the request and decide whether to accept or turn it down.</p>
+                <p>Implementing the feature for developers to receive interview requests in their private channel was challenging. Initially, we used Zapier's emoji-added trigger, which only listens to one channel at a time, meaning a new zap had to be set up for each private channel. However, this approach was not scalable. After much research, we found a solution that helped us automate all of this.</p>
+                <p>We use Zapier to record new developer signups on Google Sheets and create private channels for them on Slack. To listen to all emojis added, we integrate Slack's API with an additional tool called Integromate (now Make) because Zapier's Webhook cannot communicate with Slack API in the way we need it to.</p>
+
+                <h3>Managing Interview Requests: Developer Responses and Results</h3>
+                <p>With Slack's API and the private channel ID stored on Google Sheets, we are able to identify and record the developer's decision regarding the client's interview request. When a developer reacts with an emoji to the interview request message, the corresponding emoji is recorded on Google Sheets, allowing us to keep track of each developer's decision.</p>
+                <p>To manage interview requests, we use Zapier to record a developer's decision on Google Sheets and send an email to both parties with details for the next step when a developer accepts the interview request. When a developer declines the invitation, Zapier records their decision on Google Sheets and sends an email to the client to update them on the status.</p>
+
+                <h3>Learnings and conclusion</h3>
+                <p>We encountered a problem when our Zapier workflow was unable to identify the Slack channels recorded on Google Sheets, resulting in clients not receiving any responses. The issue was related to how Google Sheets was changing the last digit to 0 when storing the timestamp in epoch format. To resolve this, we started storing the timestamp in string format, which proved to be a quick solution.</p>
+                <p>This MVP was accomplished in under a week, demonstrating the power of no-code tools. However, the biggest challenge we faced was understanding the intricacies of the various tools we were integrating.</p>
+
             </body>
-        </section>
-    </article>
+        </article>
+    </section>
 </html>
