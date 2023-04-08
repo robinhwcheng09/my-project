@@ -13,10 +13,10 @@
                 <div class="container container--narrow">
                     <ul>
                         <li class = 'header__item'>
-                            <a href="/">Home</a>
+                            <a href="/" class = 'header__links'>Home</a>
                         </li>
                         <li class = 'header__item'>
-                            <a href="/blog.html">Blog</a>
+                            <a href="/blog.html" class = 'header__links'>Blog</a>
                         </li>
                         <!-- <li class = 'header__item'> -->
                             <!-- <a href="https://www.getrevue.co/profile/sthgood?utm_source=personal_website">Something Good</a> -->
@@ -29,7 +29,10 @@
         <article>
             <body>
                 <h1>Designing and building MVP with no-code tools</h1>
-                <p> Back in November 2021, we wanted to launch an MVP for <a href="https://arc.dev?ref=robinsblog">Arc</a>, where remote companies meet great developers. The idea was to allow companies browse a list of developers and invite them to interview right away.</p>
+                <p>Back in November 2021, our team at <a href="https://arc.dev?ref=robinsblog">Arc</a> wanted to launch a minimum viable product,  MVP. The idea was to allow companies browse a list of developers and invite them to interview right away.</p>
+                <p>The goal of the MVP is to provide a quick method to validate our business hypothesis and to improve immediately based on feedbacks. In this post, I'll go over how the MVP was designed and built with no-code tools in under a week.</p>
+
+                <h3>Designing the process</h3>
                 <p>The first step is to plan out the process and implement step by step.</p>
 
                 <ol>
@@ -76,13 +79,10 @@
                 <p>On Slack’s interview request message, we allow the developer to respond simply by reacting with an emoji. Implementing the feature for developers to respond to interview requests in their private channels was challenging. We wanted to use Zapier's emoji-added trigger to record the response, but it only listens to one channel at a time, meaning a new zap (Zapier workflow) had to be set up for each private channel. However, this approach was not scalable.</p>
                 <p>To solve this, we integrated Slack's API with another no-code tool called Integromate (now Make) because Zapier's Webhook step wasn’t enough. Using Slack’s API, we were able to listen to all emojis added to Slack messages. The API response contains the channel ID and timestamp of each message, which lets us identify which emoji are responses to the interview request.  The results are then recorded to the Google Sheet with interview requests info.</p>
 
-                <!-- <p>To listen to all emojis added, we integrate Slack's API with an additional tool called Integromate (now Make) because Zapier's Webhook cannot communicate with Slack API in the way we need it to.</p>
-                <p>With Slack's API and the private channel ID stored on Google Sheets, we are able to identify and record the developer's decision regarding the client's interview request. When a developer reacts with an emoji to the interview request message, the corresponding emoji is recorded on Google Sheets, allowing us to keep track of each developer's decision.</p>
-                <p>To manage interview requests, we use Zapier to record a developer's decision on Google Sheets and send an email to both parties with details for the next step when a developer accepts the interview request. When a developer declines the invitation, Zapier records their decision on Google Sheets and sends an email to the client to update them on the status.</p> -->
-
                 <h3>Learnings and conclusion</h3>
                 <p>An interesting problem we encountered was when the zap was unable to identify the Slack channels recorded on Google Sheets, resulting in clients not receiving any responses. The issue was related to how Google Sheets was changing the last digit to 0 when storing the timestamp in epoch format. To resolve this, we started storing the timestamp in string format instead of the original epoch format. This was a lesson for me to be extra careful when dealing with numbers, especially longer numbers.</p>
                 <p>Looking back, I'm still amazed this was accomplished in under a week, demonstrating the power of no-code tools. However, I have to stress the importance of understanding the intricacies of the various tools you are integrating to be extremely important. You're only able to maximize their potentials by understanding them thoroughly.</p>
+                <p>The no-code version ran a little over six months, while the product team works on building and improving features based on feedback. If you'd like to find talented remote developers, please check them out on <a href="https://arc.dev?ref=robinsblog">Arc</a>.</p>
 
             </body>
         </article>
