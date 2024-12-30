@@ -1,0 +1,50 @@
+html {
+    font-family: adelle-sans, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+  }
+  
+  ul {
+    text-align: left;
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+    font-style: normal;
+    font-size: 20px;
+  }
+  
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  
+  .container--narrow {
+    max-width: 30rem;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .header__item {
+    display: inline-block;
+    padding: 0.8em 0.2em;
+    font-size: 21px;
+  }
+  
+  .home.heading {
+    margin: 0;
+    font-size: 2em;
+  }
+  
+  .longform {
+    font-family: georgia, serif;
+    color: rgba(22, 22, 22, 0.9);
+  }
+  
