@@ -4,6 +4,7 @@
     !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
     posthog.init('phc_rHrGEIuOeFoatsJVyo68SiMtg2kkfqauWtIWjFNt8CR',{api_host:'https://us.i.posthog.com'})
   </script>
+
   <head>
     <meta charset="UTF-8">
     <meta  name="viewport" content="width=device-width, initial-scale-1.0">
@@ -14,38 +15,45 @@
     <link href="index.css" rel="stylesheet">
     <link rel="canonical" href="https://www.robincheng.xyz" />
   </head>
+
   <body>
-    <header>
-      <nav>
-        <div class="container container--narrow">
+    <nav>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/projects.html">Projects</a>
+      </div>
+    </nav>
+    <main class="content">
+      <section id="home">
+        <h1>Hi, I'm Robin</h1>
+        <p class="intro">
+          I enjoy building tools to help people be productive so they can focus on creating or solving complex problems.</p>
+        </p>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+          <h3>Feedback Brief</h3>
+          <p class="description">Feedback analysis tool that helps teams gather, organize, and act on user feedback effectively.</p>
+        </div>
+      </section>
+
+      <section id="blog">
+        <h2>Blogs</h2>
+        <div class="blog">
           <ul>
-            <li class="header__item">
-              <a href="/">Home</a>
+            <li>
+              <a href="/blog/how_to_design_and_build_automation_with_no_code.html">Designing and building automation with no-code</a>
             </li>
-            <li class="header__item">
-              <a href="/blog.html">Blog</a>
+            <li>
+              <a href="/blog/designing_and_building_mvp_with_no_code.html">Building an MVP with no-code</a>
             </li>
-            <!-- <li class = 'header__item'> -->
-            <!-- <a href="https://www.getrevue.co/profile/sthgood?utm_source=personal_website">Something Good</a> -->
-            <!-- </li> -->
           </ul>
         </div>
-      </nav>
-    </header>
-    <main>
-      <div class="container container--narrow">
-        <h1 class="home heading">Robin Cheng</h1>
-        <div class="longform">
+      </section>
 
-          <p>
-            Hi, my name is Robin Cheng and welcome to my site, where I share about what I'm working on or what I've built.
-          </p>
-          <p>
-            You can also find me on <a href="https://twitter.com/robincheng09">Twitter</a> or <a href="https://www.linkedin.com/in/robincheng09/">LinkedIn</a>.
-          </p>
-
-        </div>
-      </div>
     </main>
   </body>
 </html>
