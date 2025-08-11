@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name = "author" content = "Robin Cheng">
+        <meta name = "viewport" content="width=device-width, initial-scale-1.0">
+        <meta name = "keywords" content = "projects, blog, no-code, automation, support, dispute">
+        <meta name ="description" content="Learn how I automated dispute handling at Codementor">
+        <title>How I Automated Dispute Handling at Codementor | Robin Cheng</title>
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+        <link href= "blogs.css" rel="stylesheet">
+        <link rel="canonical" href="https://www.robincheng.xyz/blog/how_i_automated_dispute_handling_at_codementor
+        " />
+        <script>
+            !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getActiveMatchingSurveys getSurveys onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+            posthog.init('phc_rHrGEIuOeFoatsJVyo68SiMtg2kkfqauWtIWjFNt8CR',{api_host:'https://us.i.posthog.com'})
+        </script>
+    </head>
+
+
+
+    <body>
+        <div class="container">
+            <nav>
+                <div class="nav-links">
+                    <a href="/">Home</a>
+                    <a href="/blog">Blog</a>
+                    <a href="/projects">Projects</a>
+                </div>
+            </nav>
+            <main class="content">
+                <article id="home">
+                    <h1>How I Automated Dispute Handling at Codementor</h1>
+                <p>At Codementor, the support team was spending too much time manually handling disputes between mentor and mentee. I designed and implemented an automated system that was able to reduce the support team’s time spent on handling disputes by 80%.</p>
+
+                <h2>Mapping the process</h2>
+                <p>The first step was to learn and understand the process. I talked to the support team to understand the workflow and the challenges they were facing.</p>
+                <p>Here's how I broken down the process:</p>
+                <ol>
+                    <li>Notify mentor and mentee that a dispute exists / is being handled.</li>
+                    <li>Request evidence from both parties (supporting documentation).</li>
+                    <li>Check whether evidence was submitted.</li>
+                    <li>Notify support when both parties have submitted evidence.</li>
+                    <li>Review the evidence and make a decision.</li>
+                    <li>Notify mentor and mentee of the decision.</li>
+                    <li>Refund the mentee if needed.</li>
+                </ol>
+                <p>The entire process took more than a week, and much longer since mentors and mentees frequently did not respond. This took up a lot of the support team's time and energy and prevented them from focusing on actually helpings the users.</p>
+
+
+                <h2>Designing the automation</h2>
+                <p>After drawing out the current process, I examined how this could be streamlined and automated. I explored how to achieve the key steps from above with no-code tools. I settled on the following tools:</p>
+
+                <div class="tools">
+                    <span class="pill">Zapier (orchestrator)</span>
+                    <span class="pill">Typeform (evidence collection)</span>
+                    <span class="pill">Google Sheets (state tracking)</span>
+                    <span class="pill">Front (support inbox & interface)</span>
+                </div>
+
+                <p>For Front, Typeform, and Zapier, I used them because they were the default tools the teams were choosing. Google Sheets was used because it was a simple way to track the state of the evidence and the disputes.</p>
+
+                <h2>Challenges</h2>
+                <p>However, before implementing, there was a challenge we needed to solve. What if they never responded? Although we could keep sending follow-up emails, it wasn’t something that should be automated. This would create a poor experience for the users and the support team. So we decided to create a deadline which makes the support team’s job easier and simpler logic for the automated system. Based on the support team’s experience, we decided to give them 7 days to respond which we think should be more than enough.</p>
+                
+                <h2>Implementation</h2>
+                    <p>After learning the current process, I started designing the automated process. Here’s how it looked:</p>
+                    <ol>
+                        <li>Triggers when new dispute happens.</li>
+                        <li>Notify both parties and send emails with Typeform requesting for evidence.</li>
+                        <li>Wait 3 days, then check submissions; send a reminder if absent.</li>
+                        <li>Wait 2 more days, check again; send reminder if still absent.</li>
+                        <li>Wait 1 more day, check again; send final reminder if still absent.</li>
+                        <li>On day 7, if both parties submitted evidence (or at any point both have submitted), notify the support team to review and make a decision.</li>
+                        <li>Unarchive the related Front emails and add comments for the support agent to quickly take action.</li>
+                    </ol>
+
+                    <p>Zapier is used to connect different tools together, Typeform to collect evidence, Google Sheets for evidence and dispute state tracking, and Front as the support team’s interface.</p>
+
+                    <h2>Results</h2>
+                    <p>In the new process, the support team was notified only when both parties submitted their evidence or when the deadline is up. Compared to the previous process, the support team is only involved when everything is ready and a decision can be made. By automating the manual tasks, the support team is now only needed when a decision needs to be made.</p>
+
+                    <h2>How I’d improve today</h2>
+                    <p>To further improve, we can use AI to evaluate the evidence sent in by both parties to speed up decision making. AI can review the dispute claim and the evidence to speed up the decision process for the support team. Since revenue is involved, we still need humans in the loop to make the final decision because we refund if we find the claim to be true. However, as AI improves, we can probably set a confidence threshold to evaluate and automate some decision making.</p>
+
+                    <h2>Takeaway</h2>
+                    <p>This was a rewarding project, I got a deep understanding of support operations and leveraged software to make their job easier. This allowed our support team to focus on what they do best, which is assisting clients, rather than spending time on repetitive and time-consuming manual tasks.
+                        
+                    </p>
+                </article>
+            </main>
+        </div>
+    </body>
+    <footer>
+        <div class="footer-message">Have a great day! ✌️</div>
+        <div class="footer-links">
+            <a href="mailto:robincheng09@gmail.com">Email</a>
+            <a href="https://github.com/robinhwcheng09">GitHub</a>
+            <a href="https://www.linkedin.com/in/robincheng09/">LinkedIn</a>
+        </div>
+    </footer>
+</html>
